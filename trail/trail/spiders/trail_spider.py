@@ -19,7 +19,7 @@ class QuotesSpider(scrapy.Spider):
     matchObj = re.match( '.*full_name":"(.*)","work.*', name)
     name = matchObj.group(1)
     yield {
-      'Name': name,
-      'Badges': int(response.xpath('/html/body/div[1]/main/div/div/div/div[1]/section/div[2]/div[2]/div/div[1]/div[2]/text()').extract_first().replace(',', '')),
-      'Points': int(response.xpath('/html/body/div[1]/main/div/div/div/div[1]/section/div[2]/div[2]/div/div[2]/div[2]/text()').extract_first().replace(',', ''))
+      'name': name,
+      'badges': int(response.xpath('/html/body/div[1]/main/div/div/div/div[1]/section/div[2]/div[2]/div/div[1]/div[2]/text()').extract_first().replace(',', '')),
+      'points': int(response.xpath('/html/body/div[1]/main/div/div/div/div[1]/section/div[2]/div[2]/div/div[2]/div[2]/text()').extract_first().replace(',', ''))
     }
