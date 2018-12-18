@@ -7,8 +7,9 @@ class QuotesSpider(scrapy.Spider):
   def start_requests(self):
     urls = [
     # 'http://quotes.toscrape.com/page/1/',
-    'https://trailhead.salesforce.com/en/me/jameldjackson',
-    'https://trailhead.salesforce.com/en/me/tmartin357'
+    'https://trailhead.com/me/jameldjackson',
+    'https://trailhead.com/me/tmartin357',
+    'https://trailhead.com/me/adhunter'
     ]
     for url in urls:
       yield scrapy.Request(url=url, callback=self.parse)
