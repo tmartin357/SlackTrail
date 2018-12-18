@@ -6,9 +6,9 @@ class QuotesSpider(scrapy.Spider):
 
   def start_requests(self):
     urls = [
-    # 'http://quotes.toscrape.com/page/1/',
     'https://trailhead.com/me/jameldjackson',
     'https://trailhead.com/me/tmartin357',
+    'https://trailhead.com/me/BabatundeAborisade',
     'https://trailhead.com/me/adhunter'
     ]
     for url in urls:
