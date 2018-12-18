@@ -1,5 +1,4 @@
 ---
-title: Trailhead Directory
 layout: default
 ---
 <div id="example-table">0011</div>
@@ -8,11 +7,18 @@ var tableData = {%- include data.json -%};
 
 
 var table = new Tabulator("#example-table", {
+    height:"311px",
+    layout:"fitDataFill",
     data:tableData, //set initial table data
     columns:[
         {title:"Name", field:"name"},
         {title:"Badges", field:"badges"},
         {title:"Points", field:"points"},
+        {title:"Profile", field:"url", formatter:"link", formatterParams:{urlField:"url"}}
     ],
+    initialSort:[
+    {column:"badges", dir:"desc"}, //sort by this first
+    {column:"points", dir:"desc"}, //then sort by this second
+    ]
 });
 </script>

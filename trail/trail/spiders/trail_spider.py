@@ -18,8 +18,12 @@ class QuotesSpider(scrapy.Spider):
     print(name)
     matchObj = re.match( '.*full_name":"(.*)","work.*', name)
     name = matchObj.group(1)
+
+    # myurl = '<a href="'+response.request.url+'">Link</a>'
+    myurl = response.request.url
     yield {
       'name': name,
       'badges': int(response.xpath('/html/body/div[1]/main/div/div/div/div[1]/section/div[2]/div[2]/div/div[1]/div[2]/text()').extract_first().replace(',', '')),
-      'points': int(response.xpath('/html/body/div[1]/main/div/div/div/div[1]/section/div[2]/div[2]/div/div[2]/div[2]/text()').extract_first().replace(',', ''))
+      'points': int(response.xpath('/html/body/div[1]/main/div/div/div/div[1]/section/div[2]/div[2]/div/div[2]/div[2]/text()').extract_first().replace(',', '')),
+      'url': str(myurl)
     }
