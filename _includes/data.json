@@ -1,8 +1,8 @@
 [
-{"url": "https://trailhead.salesforce.com/me/BabatundeAborisade", "points": 1700, "name": "Babatunde Aborisade", "badges": 3},
-{"url": "https://trailhead.salesforce.com/me/jameldjackson", "points": 10325, "name": "Jamel Jackson", "badges": 11},
-{"url": "https://trailhead.salesforce.com/me/cyndiewandia", "points": 3550, "name": "Cyndie Wandia", "badges": 5},
-{"url": "https://trailhead.salesforce.com/me/adhunter", "points": 2350, "name": "April Dean Hunter", "badges": 6},
-{"url": "https://trailhead.salesforce.com/me/jaroper86", "points": 3850, "name": "Jessie Roper", "badges": 14},
-{"url": "https://trailhead.salesforce.com/me/tmartin357", "points": 13800, "name": "Taylor Martin", "badges": 18}
+{"url": "https://trailhead.salesforce.com/me/BabatundeAborisade", "badges": 3, "points": 1700, "name": "Babatunde Aborisade", "rank": "Hiker"},
+{"url": "https://trailhead.salesforce.com/me/jameldjackson", "badges": 11, "points": 10325, "name": "Jamel Jackson", "rank": "Adventurer"},
+{"url": "https://trailhead.salesforce.com/me/jaroper86", "badges": 14, "points": 3850, "name": "Jessie Roper", "rank": "Explorer"},
+{"url": "https://trailhead.salesforce.com/me/tmartin357", "badges": 18, "points": 13800, "name": "Taylor Martin", "rank": "Adventurer"},
+{"url": "https://trailhead.salesforce.com/me/cyndiewandia", "badges": 5, "points": 3550, "name": "Cyndie Wandia", "rank": "Hiker"},
+{"url": "https://trailhead.salesforce.com/me/adhunter", "badges": 6, "points": 2350, "name": "April Dean Hunter", "rank": "Hiker"}
 ]

@@ -6,11 +6,32 @@
   <link rel="stylesheet" href="assets/main.css">
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
-    {%- include google-analytics.html -%}
+  {%- include google-analytics.html -%}
   {%- endif -%}
 
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.1.4/js/tabulator.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabulator/4.1.4/css/tabulator.css" />
-  
+
+  <style>
+    /** Wrapper */
+    .wrapper {
+      max-width: -webkit-calc(800px);
+      max-width: calc(800px);
+      margin-right: auto;
+      margin-left: auto;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+
+    @media screen and (max-width: 800px) {
+      .wrapper {
+        max-width: -webkit-calc(800px - (30px));
+        max-width: calc(800px - (30px));
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+    }
+  </style>
+
 </head>

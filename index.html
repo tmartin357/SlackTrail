@@ -3,22 +3,71 @@ layout: default
 ---
 <div id="example-table">0011</div>
 <script>
-var tableData = {%- include data.json -%};
+    var tableData = {%- include data.json -%};
 
 
-var table = new Tabulator("#example-table", {
-    height:"311px",
-    layout:"fitDataFill",
-    data:tableData, //set initial table data
-    columns:[
-        {title:"Name", field:"name"},
-        {title:"Badges", field:"badges"},
-        {title:"Points", field:"points"},
-        {title:"Profile", field:"url", formatter:"link", formatterParams:{urlField:"url"}}
-    ],
-    initialSort:[
-    {column:"points", dir:"desc"}, //sort by this first
-    {column:"badges", dir:"desc"}, //then sort by this second
-    ]
-});
+    var table = new Tabulator("#example-table", {
+        height: "311px",
+        // layout: "fitDataFill",
+        layout:"fitData",
+        data: tableData, //set initial table data
+        columns: [
+            { title: "Name", field: "name" },
+            {title: "Rank", field: "rank", sorter: function (a, b) {
+                    var myA = 0
+                    var myB = 0
+                    switch (a) {
+                        case "Ranger":
+                            myA = 6;
+                            break;
+                        case "Expeditioner":
+                            myA = 5;
+                            break;
+                        case "Mountaineer":
+                            myA = 4;
+                            break;
+                        case "Adventurer":
+                            myA = 3;
+                            break;
+                        case "Explorer":
+                            myA = 2;
+                            break;
+                        case "Hiker":
+                            myA = 1;
+                            break;                    
+                    }
+
+                    switch (b) {
+                        case "Ranger":
+                            myB = 6;
+                            break;
+                        case "Expeditioner":
+                            myB = 5;
+                            break;
+                        case "Mountaineer":
+                            myB = 4;
+                            break;
+                        case "Adventurer":
+                            myB = 3;
+                            break;
+                        case "Explorer":
+                            myB = 2;
+                            break;
+                        case "Hiker":
+                            myB = 1;
+                            break;                    
+                    }
+                    return myA - myB; //you must return the difference between the two values
+                },
+            },
+            { title: "Badges", field: "badges" },
+            { title: "Points", field: "points" },
+            { title: "Profile", field: "url", formatter: "link", formatterParams: { urlField: "url" } }
+        ],
+        initialSort: [
+            { column: "points", dir: "desc" }, //sort by this first
+            { column: "badges", dir: "desc" }, //then sort by this second
+            { column: "rank", dir: "desc" }
+        ]
+    });
 </script>
