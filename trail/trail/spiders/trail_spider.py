@@ -9,7 +9,8 @@ class QuotesSpider(scrapy.Spider):
     'https://trailhead.com/me/jameldjackson',
     'https://trailhead.com/me/tmartin357',
     'https://trailhead.com/me/BabatundeAborisade',
-    'https://trailhead.com/me/adhunter'
+    'https://trailhead.com/me/adhunter',
+    'https://trailhead.com/me/cyndiewandia'
     ]
     for url in urls:
       yield scrapy.Request(url=url, callback=self.parse)
