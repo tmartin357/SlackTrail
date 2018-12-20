@@ -29,17 +29,17 @@ class QuotesSpider(scrapy.Spider):
     mypoints = int(response.xpath('/html/body/div[1]/main/div/div/div/div[1]/section/div[2]/div[2]/div/div[2]/div[2]/text()').extract_first().replace(',', ''))
 
     myrank = "Scout"
-    if mypoints > 200 and mybadges > 1:
+    if mypoints >= 200 and mybadges >= 1:
       myrank = "Hiker"
-    if mypoints > 3000 and mybadges > 5:
+    if mypoints >= 3000 and mybadges >= 5:
       myrank = "Explorer"
-    if mypoints > 9000 and mybadges > 10:
+    if mypoints >= 9000 and mybadges >= 10:
       myrank = "Adventurer"
-    if mypoints > 18000 and mybadges > 25:
+    if mypoints >= 18000 and mybadges >= 25:
       myrank = "Mountaineer"
-    if mypoints > 35000 and mybadges > 50:
+    if mypoints >= 35000 and mybadges >= 50:
       myrank = "Expeditioner"
-    if mypoints > 50000 and mybadges > 100:
+    if mypoints >= 50000 and mybadges >= 100:
       myrank = "Ranger"
 
     yield {
