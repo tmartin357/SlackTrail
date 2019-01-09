@@ -9,9 +9,8 @@ class QuotesSpider(scrapy.Spider):
     'https://trailhead.com/me/jameldjackson',
     'https://trailhead.com/me/tmartin357',
     'https://trailhead.com/me/BabatundeAborisade',
-    'https://trailhead.com/me/adhunter',
+    # 'https://trailhead.com/me/adhunter',
     'https://trailhead.com/me/cyndiewandia',
-    'https://trailhead.com/me/jaroper86',
     'https://trailhead.com/me/jaroper86'
     ]
     for url in urls:
